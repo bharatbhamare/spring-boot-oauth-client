@@ -1,0 +1,8 @@
+server:
+  port: 8084  servlet:    session:      cookie:        name: TSESSION
+  
+security:  oauth2:    client:      client-id: app3
+      client-secret: app3
+      user-authorization-uri: http://localhost:8082/oauth/authorize
+      access-token-uri: http://localhost:8082/oauth/token
+    resource:      token-info-uri: http://localhost:8082/oauth/check_token
