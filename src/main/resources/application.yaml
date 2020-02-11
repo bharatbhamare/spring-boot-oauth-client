@@ -3,6 +3,13 @@ server:
   
 security:  oauth2:    client:      client-id: app3
       client-secret: app3
-      user-authorization-uri: http://localhost:8082/oauth/authorize
-      access-token-uri: http://localhost:8082/oauth/token
-    resource:      token-info-uri: http://localhost:8082/oauth/check_token
+      user-authorization-uri: http://dev056:8082/oauth/authorize
+      access-token-uri: http://dev056:8082/oauth/token
+    resource:      token-info-uri: http://dev056:8082/oauth/check_token
+
+logging:
+  level:
+     org.springframework.security.oauth2: DEBUG
+     org.springframework.security.jwt: DEBUG
+     org.springframework: DEBUG
+     com.progress.appserv.services.security: DEBUG
